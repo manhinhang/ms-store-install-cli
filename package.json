@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "install app from microsoft store by cli",
   "bin": {
-    "ms-store-install": "./lib/index.js"
+    "ms-store-install": "appium && ./lib/index.js"
   },
   "scripts": {
+    "appium": "appium",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "start": "npx ts-node src/index.ts",

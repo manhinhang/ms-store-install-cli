@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { driver, windowsAppDriverCapabilities } from 'selenium-appium'
 
 import AppPage from './Pages/AppPage';
@@ -7,7 +9,8 @@ import ResultPage from './Pages/ResultPage';
 
 export async function main() {
   try {
-    let appName = 'Whatsapp Desktop'
+    // console.log(process.argv);
+    let appName = process.argv[2]
     const appId = 'Microsoft.WindowsStore_8wekyb3d8bbwe!App'
     const capabilites = windowsAppDriverCapabilities(appId);
     await driver.startWithCapabilities(capabilites)

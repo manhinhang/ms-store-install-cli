@@ -2,11 +2,12 @@
   "name": "ms-store-install-cli",
   "version": "1.0.0",
   "description": "install app from microsoft store by cli",
-  "bin": "index.js",
+  "bin": {
+    "ms-store-install": "./lib/index.js"
+  },
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-
     "start": "npx ts-node src/index.ts",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
@@ -30,15 +31,20 @@
   },
   "homepage": "https://github.com/manhinhang/ms-store-install-cli#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
     "@babel/core": "^7.10.4",
     "@babel/node": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "typescript": "^3.9.5",
+    "@types/selenium-webdriver": "^4.0.1",
+    "appium": "1.15.0",
     "selenium-appium": "^0.0.15",
     "selenium-webdriver": "^4.0.0-alpha.4",
-    "@types/selenium-webdriver": "^4.0.1",
-    "appium": "1.15.0"
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.14"
   }
 }

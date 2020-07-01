@@ -1,0 +1,44 @@
+{
+  "name": "ms-store-install-cli",
+  "version": "1.0.0",
+  "description": "install app from microsoft store by cli",
+  "bin": "index.js",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+
+    "start": "npx ts-node src/index.ts",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manhinhang/ms-store-install-cli.git"
+  },
+  "keywords": [
+    "microsoft",
+    "cli",
+    "store",
+    "automation"
+  ],
+  "author": "manhinhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manhinhang/ms-store-install-cli/issues"
+  },
+  "homepage": "https://github.com/manhinhang/ms-store-install-cli#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "typescript": "^3.9.5",
+    "selenium-appium": "^0.0.15",
+    "selenium-webdriver": "^4.0.0-alpha.4",
+    "@types/selenium-webdriver": "^4.0.1",
+    "appium": "1.15.0"
+  }
+}

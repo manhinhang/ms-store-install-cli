@@ -5,6 +5,7 @@ Install app from Microsoft store by command line
 # Installation
 
 ```bash
+npm install
 npm run build
 npm link
 ```
